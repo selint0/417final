@@ -1,0 +1,361 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* Reset CSS :) */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* global style!! woo */
+:root{
+	--light-gray: #eaeaea;
+  	--med-gray: #555;
+	--dark-gray: #222;
+	--white: #ffffe8;
+	--brown: #54493f;
+	--dk-green:#709775;
+	--pink:#cf827b;
+	--hot-pink:#DE0B63;
+	--box-shadow: -5px 5px 5px var(--med-gray);
+	--hover-shadow: -3px 3px 6px var(--med-gray);
+	font-family: "Raleway", sans-serif;
+	font-size: 16px;
+}
+
+html{
+	background-color: var(--white);
+}
+
+body{
+	color: var(--dark-gray);
+	line-height: 1.35;
+	font-family: "Raleway", sans-serif;
+	box-sizing: border-box;
+}
+
+nav{
+	display:grid;
+	grid-template-columns:1fr 1fr;
+}
+
+nav ul {
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+	list-style: none;
+	padding-top:30px;
+}
+nav a, nav h2 {
+	color:#ffffff;
+	padding:15px;
+	background-color:var(--pink);
+	border-radius: 15px;
+	text-decoration:none;
+}
+nav a:hover, nav h2:hover {
+	color:var(--pink);
+	background-color: var(--white);
+}
+/* Hidden content for screen reader users - code from: https://webaim.org/techniques/css/invisiblecontent/ - I got this from the example you put in the slack channel*/
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+/* general rules */
+header, main, footer{
+	width: 100%;
+	padding: 16px;
+	max-width: calc(1280px - 32px);
+	margin: 0 auto;
+}
+/* header & headings :D */
+header{
+	margin: auto;
+	background-color: var(--dk-green);
+	color:var(--white);
+}
+
+h1, h2, h3{
+	text-align: center;
+	font-weight: bold;
+}
+
+h1{
+	font-size: 2rem;
+	margin: 1rem;
+}
+
+h2{
+	font-size: 1.65rem;
+	margin: 0.75rem;
+}
+
+h3{
+	font-size: 1.45rem;
+	margin: 0.5rem;
+}
+/* general for all images */
+img{
+	display: block;
+	margin: 0 auto;
+}
+/* now we're getting into some words */
+p{
+	max-width: 65ch;
+	padding: 1rem 0;
+	margin: 0 auto;
+}
+/* styles for the About Us section */
+#about{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 400px;
+}
+
+#about > img{
+	grid-column: 1/-1;
+}
+#about img[src="images/potclass.jpg"]{
+	grid-column: 1;
+	grid-row:2/4;
+	padding-left:60px;
+	padding-top:50px;
+}
+#about h2, #about p{
+	grid-column: 2;
+	grid-row: 2;
+	padding:30px;
+	padding-right:220px;
+	margin-left:-100px;
+}
+#about p{
+	margin-top:70px;
+}
+/* form styles */
+button, input[type="submit"]{
+	display: block;
+	background-color: var(--pink);
+	color: var(--white);
+	border-radius: 15px;
+	border: none;
+	padding:1rem;
+	box-shadow: var(--box-shadow);
+}
+#contact h2{
+	margin-top:50px;
+}
+form{
+	display: block;
+	width: 300px;
+	padding: 1rem;
+	margin: 0 auto;
+	color: #222;
+	font-size: 1.1em;
+}
+label{
+	padding-left: 0.5em;
+	margin: 0.75em 0 0.25em 0;
+}
+#game input[type="submit"]{
+	width: 70%;
+	margin: 20px auto;
+    padding: 20px;
+	
+}
+#game form{
+	color:var(--white);
+}
+
+input, label, fieldset{
+	display: block;
+	width: 95%;
+	font-size: 1em;
+}
+
+.required{
+  display: inline-block;
+  color: #DE0B63;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+
+#contact input{
+	padding: 0.25em 0.5em;
+	border: 1px solid #222;
+	height: 1.5em;
+}
+
+fieldset{
+	border: 1px solid #222;
+	padding: 0.5em 0 1em 0.5em;
+	margin: 0.75em 0 0.25em 0;
+	width: 98%;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr 3fr;
+}
+
+#contact input[type=submit]{
+	padding: 0.75em;
+	width: 35%;
+	height: auto;
+	margin-left: 67%;
+	color:var(--white);
+	background-color: var(--dk-green);
+	border-radius: 15px;
+	border: none;
+}
+
+textarea{
+	width: 100%;
+	height: 5em;
+	margin-bottom: 1em;
+}
+
+input:focus, textarea:focus{
+	border-color: var(--pink);
+	box-shadow: 0 0 0 3px rgba(34, 34, 34, 0.3);
+	border-radius: 4px;
+}
+
+input.error, textarea.error{
+	border-color: #DE0B63;
+}
+
+.message{
+    display: none;
+    color: var(--hot-pink);
+    font-size: 1.2em;
+    margin: 0.25em 0;
+    font-weight: bold;
+}
+  
+.error{
+    font-size: 1em;
+    display: block;
+}
+  
+.errorInput{
+    border: 1px solid var(--hot-pink);
+}
+/* products and game specific styles */
+#products, #game{
+	background-color: var(--dk-green);
+	color:var(--white);
+	padding: 1rem;
+	width: calc(100% - 2rem);
+	max-width: 1280px;
+}
+/* products specific styles */
+#products .currentItem{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 2fr;
+	gap: 1rem;
+}
+
+.hiddenItem{
+	display: none;
+}
+
+#switcherButtons{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+	width: fit-content;
+	margin: 2rem auto;
+}
+
+#products img{
+	grid-row: 1/-1;
+}
+
+#products h3{
+	grid-column: 2/-1;
+	align-self: end;
+}
+/* game styles */
+#game{
+	margin-top: 2rem;	
+	padding-bottom: 2rem;
+}
+
+#game div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+#game h2{
+	grid-column: 1/-1;
+}
+
+#game form{
+	padding: 1rem;
+}
+
+#gameDisplay p{
+	padding: 0.5rem;
+}
+/* footer styles */
+footer{
+	padding: 1rem 0;
+	text-align: center;
+	background-color: var(--dk-green);
+	color:var(--white);
+	margin-top: 2rem;
+}
+/* hover fun styles */
+@media (hover:hover){
+	button:hover, input[type="submit"]:hover{
+		box-shadow: var(--hover-shadow);
+	}
+}

@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sam Lint">
+    <link href = "styles.css" rel="stylesheet">
+    <link href = "script.js" rel="scripts">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Plant Store</title>
 </head>
 <body>
@@ -18,6 +24,8 @@
     </header>
     <main>
         <section id="about">
+            <img src="images/store.jpg" alt="store with an orange couch and lots of plants" width="800" height="470">
+            <img src="images/potclass.jpg" alt="a plant class with people around  table in a plant store" width="250">
             <h2>About Our Shop</h2>
             <p>We are a small shop located in Phoenix, Arizona with the belief that plants can bring people together. We also know how overwhelming entering the plant community can seem and we are always ready to help our customers no matter their starting level. We also firmly believe in giving back to the community through our sponsorships and free Friday classes. So come by and check us out!</p>
         </section>
@@ -25,23 +33,29 @@
             <h2>Our Plant Products!</h2>
             <section id="product1" class="currentItem">
                 <h3>Indoor Friends</h3>
-                <img src="http://via.placeholder.com/600x400" alt="placeholder image that is 600 by 400 pixels - your images should have appropriate alt text">
+                <img src="images/Monstera.jpg" alt="Monstera in a white pot with a white backdrop" width="400">
                 <p>These plants all vary in care level and can either be a great addition to your space or a project for you to challenge yourself with! We like to view these guys as member of our crew and we hope to see you take one home and promote them to your own. Eventually one plant will turn to two and three, trust us with this new addiction because there is no turning back from here.</p>
             </section>
             <section id="product2" class="currentItem">
                 <h3>Floral Friends</h3>
-                <img src="http://via.placeholder.com/600x400" alt="placeholder image that is 600 by 400 pixels - your images should have appropriate alt text">
+                <img src="images/Orchid.jpg" alt="a white orchid in a white pot on a birch plant stand with a white backdrop" width="400">
                 <p>Roses are red, violets are blue, plants that bloom? We got em too! One of our goals is to help turn your home into the interior of a Rain Forest Cafe. These pals hold a special place in our hearts because they tend to take more time to maintain but they sure are worth it. Come see more of our selection to find out more about care level!</p>
             </section>
             <section id="product3" class="currentItem">
                 <h3>Plant Care</h3>
-                <img src="http://via.placeholder.com/600x400" alt="placeholder image that is 600 by 400 pixels - your images should have appropriate alt text">
+                <img src="images/planttools.jpg" alt="plant tools on a wooden table" width="400">
                 <p>Plants take assistance to thrive. Let us help you find the best way to thrive with your plants! Or sometimes half of the joy in becoming a plant parent is in finding really cool swag. Using our tools is another great way to show off street cred in the plant community as well! Who wouldn't take your hobbies seriously if you gave the gloves.</p>
+            </section>
+            <section id="switcherButtons">
+                <h2 class="sr-only">Click on a Button to View a Product</h2>
+                <button id="btn1">Indoor Plants</button>
+                <button id="btn2">Floral Plants</button>
+                <button id="btn3">Planting Tools</button>
             </section>
         </section>
         <section id="game">
             <div>
-                <h2>Guessing Game</h2>
+                <h2>Win a Plant</h2>
                 <form>
                     <label for="numGuess">Enter a Number Between 1 and 10:</label>
                     <span class="message">Please enter a number from 1 to 10</span>
@@ -50,7 +64,7 @@
                 </form>
                 <section id="gameDisplay">
                     <h3>Guess a Number!</h3>
-                    <p>Enter a number between 1 and 10 in the box to the left and click the button to play. If your number matches, you win a free cutting!</p>
+                    <p>Enter a number between 1 and 10 in the box to the left and click the button to play. If your number matches, you win a free plant cutting! The current plant in season is the Prayer Plant</p>
                     <p id="gameOutput"></p>
                 </section>  
             </div>      
@@ -62,22 +76,23 @@
                     <input type="text" name="myName" id="myName" required>
 
                 <label for="myEmail">Email<span class="required">*</span></label>
-                    <input type="email" name="myEmail" id="myEmail" autocomplete="email" required>
+                    <input type="email" name="myEmail" id="myEmail" required>
 
                 <label for="myPhone">Phone<span class="required">*</span></label>
-                    <input type="tel" name="myPhone" id="myPhone" autocomplete="tel" required>
+                    <input type="tel" name="myPhone" id="myPhone" required>
 
-                <fieldset>
-                    <legend>Preferred Contact Method<span class="required">*</span></legend>
-                    <input type="radio" name="contactPref" id="contactPref" required checked>
-                    <label for="contactPref">Phone</label>
-                    <label for="contactPref">Email</label>
-                </fieldset>
+                    <fieldset>
+                        <legend>Preferred Contact Method<span class="required">*</span></legend>
+                        <input type="radio" name="contactPref" id="contactPrefp" required checked>
+                        <label for="contactPrefp">Phone</label>
+                        <input type="radio" name="contactPref" id="contactPrefe" required checked>
+                        <label for="contactPrefe">Email</label>
+                    </fieldset>
 
                 <label for="myMessage">Message<span class="required">*</span></label>
                     <textarea name="textarea" id="myMessage"></textarea>
                 
-                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="mySubmit" id="mySubmit">
             </form>
         </section>
     </main>
