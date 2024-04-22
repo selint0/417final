@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sam Lint">
-    <link href = "styles.css" rel="stylesheet">
-    <link href = "script.js" rel="scripts">
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Plant Store</title>
 </head>
 <body>
+    <a href="#about" class="sr-only">Skip to Main Content</a>
     <header>
+        <h1>Plant Store</h1>
         <nav>
-            <h1>Plant Store</h1>
             <ul>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#products">Our Plants</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
+        <div id="theme-switch">
+            <div id="sun">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dark">
+                    <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div id="moon">
+                <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="dark">
+                    <path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
     </header>
     <main>
         <section id="about">
@@ -36,12 +49,12 @@
                 <img src="images/Monstera.jpg" alt="Monstera in a white pot with a white backdrop" width="400">
                 <p>These plants all vary in care level and can either be a great addition to your space or a project for you to challenge yourself with! We like to view these guys as member of our crew and we hope to see you take one home and promote them to your own. Eventually one plant will turn to two and three, trust us with this new addiction because there is no turning back from here.</p>
             </section>
-            <section id="product2" class="currentItem">
+            <section id="product2" class="hiddenItem">
                 <h3>Floral Friends</h3>
                 <img src="images/Orchid.jpg" alt="a white orchid in a white pot on a birch plant stand with a white backdrop" width="400">
                 <p>Roses are red, violets are blue, plants that bloom? We got em too! One of our goals is to help turn your home into the interior of a Rain Forest Cafe. These pals hold a special place in our hearts because they tend to take more time to maintain but they sure are worth it. Come see more of our selection to find out more about care level!</p>
             </section>
-            <section id="product3" class="currentItem">
+            <section id="product3" class="hiddenItem">
                 <h3>Plant Care</h3>
                 <img src="images/planttools.jpg" alt="plant tools on a wooden table" width="400">
                 <p>Plants take assistance to thrive. Let us help you find the best way to thrive with your plants! Or sometimes half of the joy in becoming a plant parent is in finding really cool swag. Using our tools is another great way to show off street cred in the plant community as well! Who wouldn't take your hobbies seriously if you gave the gloves.</p>
@@ -66,12 +79,14 @@
                     <h3>Guess a Number!</h3>
                     <p>Enter a number between 1 and 10 in the box to the left and click the button to play. If your number matches, you win a free plant cutting! The current plant in season is the Prayer Plant</p>
                     <p id="gameOutput"></p>
+                    <p id="user"></p><br>
+                    <p id="answer"></p>
                 </section>  
             </div>      
         </section>
         <section id="contact">
             <h2>Contact Us!</h2>
-            <form>
+            <form id="contactUs">
                 <label for="myName">Full Name<span class="required">*</span></label>
                     <input type="text" name="myName" id="myName" required>
 
