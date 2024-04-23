@@ -72,7 +72,7 @@
                 <form>
                     <label for="numGuess">Enter a Number Between 1 and 10:</label>
                     <span class="message">Please enter a number from 1 to 10</span>
-                    <input type="number" name="numGuess" id="numGuess">
+                    <input type="number" name="numGuess" id="numGuess" min="1" max="10">
                     <input type="submit" name="guessGame" id="guessGame" value="Play the Game!">
                 </form>
                 <section id="gameDisplay">
@@ -86,29 +86,39 @@
         </section>
         <section id="contact">
             <h2>Contact Us!</h2>
-            <form id="contactUs">
-                <label for="myName">Full Name<span class="required">*</span></label>
-                    <input type="text" name="myName" id="myName" required>
+            <form id="contactUs" action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+                <label for="fName">Full Name: <span class="required">*</span></label>
+                <input type="text" name="fName" id="fName" class="">
+                <span id="fNameError" class="hiddenItem">First and Last Name are required</span>
 
-                <label for="myEmail">Email<span class="required">*</span></label>
-                    <input type="email" name="myEmail" id="myEmail" required>
+                <label for="number">Phone Number: <span class="required" id="telReq"></span></label>
+                <input type="tel" name="number" id="number" class="">
+                <span id="telError" class="hiddenItem">Phone number is required</span>
 
-                <label for="myPhone">Phone<span class="required">*</span></label>
-                    <input type="tel" name="myPhone" id="myPhone" required>
+                <label for="email">Email:<span class="required" id="emailReq">*</span></label>
+                <input type="email" name="email" id="email" class="">
+                <span id="emailError" class="hiddenItem">Email is required</span>
 
-                    <fieldset>
-                        <legend>Preferred Contact Method<span class="required">*</span></legend>
-                        <input type="radio" name="contactPref" id="contactPrefp" required checked>
-                        <label for="contactPrefp">Phone</label>
-                        <input type="radio" name="contactPref" id="contactPrefe" required checked>
-                        <label for="contactPrefe">Email</label>
-                    </fieldset>
+                <fieldset>
+                    <legend>Preferred Method Of Contact <span class="required">*</span></legend>
+                    <label for="prefPhone" class="custom-radio">
+                        <input type="radio" name="contact-pref" id="prefPhone" required="" checked=""> 
+                        Phone
+                    </label>
+                    <label for="prefEmail" class="custom-radio">
+                        <input type="radio" name="contact-pref" id="prefEmail"> 
+                        Email
+                    </label>
+                </fieldset>
 
-                <label for="myMessage">Message<span class="required">*</span></label>
-                    <textarea name="textarea" id="myMessage"></textarea>
-                
+                <label for="message">Your Message: <span class="required">*</span></label>
+                <textarea id="message" class=""></textarea>
+                <span id="commentError" class="hiddenItem">Comments are required</span>
+
                 <input type="submit" name="mySubmit" id="mySubmit">
             </form>
+            
+            <p id="confirm" class="hiddenItem"></p>
         </section>
     </main>
     <footer>

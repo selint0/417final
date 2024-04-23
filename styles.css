@@ -275,7 +275,7 @@ fieldset{
 	margin: 0.75em 0 0.25em 0;
 	width: 98%;
 	display: grid;
-	grid-template-columns: 1fr 3fr 1fr 3fr;
+	grid-template-columns: 6fr 6fr 1fr 1fr;
 }
 
 #contact input[type=submit]{
@@ -301,21 +301,21 @@ input:focus, textarea:focus{
 	border-radius: 4px;
 }
 
-input.error, textarea.error{
-	border: 1px solid #DE0B63;
+#contact [class~=error]{
+	border: 1px solid var(--hot-pink);
+    font-size: 1em;
+    display: block;
+}
+#contact span{
+	color: var(--hot-pink);
 }
 
-.message{
+.messages{
     display: none;
     color: var(--hot-pink);
     font-size: 1.2em;
     margin: 0.25em 0;
     font-weight: bold;
-}
-  
-.error{
-    font-size: 1em;
-    display: block;
 }
 
 /* products and game specific styles */
