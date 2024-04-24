@@ -154,7 +154,7 @@ function validateForm(event){
         confirm.classList.remove("hiddenItem");
         
         // display the user's input to them in the paragraph for output
-        confirm.innerHTML = "<strong>You Entered:<br></strong> Name: " + uName.value + "<br>Email: " + email.value + "<br>Phone: " + phone.value + "<br>Email: " + email.value + "<br>Comments: " + messages.value;
+        confirm.innerHTML = "<strong>You Entered:<br></strong> Name: " + uName.value + "<br>Email: " + email.value + "<br>Phone: " + phone.value + "<br>Comments: " + messages.value;
         
         // You'd also add the code to actually submit to the server here in cases where you have a server to connect to - we are not including that in this activity but an example is below. Remember that the submit event happens to the form itself, not any input!
         document.getElementById("contactUs").submit();

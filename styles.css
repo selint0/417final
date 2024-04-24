@@ -317,6 +317,14 @@ input:focus, textarea:focus{
     margin: 0.25em 0;
     font-weight: bold;
 }
+#confirm{
+	border: 2px solid var(--dk-green);
+	text-align: center;
+	width: 70%;
+	max-width: 75ch;
+	margin: 1rem auto;
+	padding: 2rem;
+  }
 
 /* products and game specific styles */
 #products, #game{
